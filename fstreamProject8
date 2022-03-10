@@ -1,6 +1,5 @@
 #include <iostream>
 #include <fstream>
-#include <string>
 
 using namespace std;
 
@@ -39,52 +38,50 @@ int main(){
 	
 	while(atLeastOneFileNotAtEnd == true)
 	{
-		if(!inFile1.eof())
+		if(inFile1.eof())
 		{
-			if(inFile2Written == false)
+			if (inFile2Written == false)
 			{
-				outFile1 >> fClientNumber, fClientName;
+				outFile1 << fClientNumber<<" "<< fClientName << endl;
 				inFile2Written = true;
 			}
-			
-		else if(!inFile2.eof())
-		   
-			if(inFile1Written == false)
+		}
+		else if (inFile2.eof())
+		{
+			if (inFile1Written == false)
 			{
-				outFile1 >> mClientNumber, mClientName;
-				inFile1Written == true;
+				outFile1 << mClientNumber<<" "<< mClientName << endl;
+				inFile1Written = true;
 			}
-		
-		else if(mClientNumber < fClientNumber)
-			{
-				outFile1 >> mClientNumber, mClientName;
-				inFile1Written == true;
-			}
-		
+		}
+		else if (mClientNumber < fClientNumber)
+		{
+			outFile1 << mClientNumber<<" "<< mClientName << endl;
+			inFile1Written = true;
+		}
 		else
 		{
-			outFile1 >> fClientNumber, fClientName;
-			inFile2Written == true;
-		}
-						
+			outFile1 << fClientNumber<<" "<< fClientName << endl;
+			inFile2Written = true;
+		}				
 		
-	if((inFile1.eof()) && (inFile2Written == true))
-	{
-			inFile1 >> mClientNumber, mClientName;
+		if(!inFile1.eof()) && (inFile2Written == true)
+		{
+			inFile1 >> mClientNumber;
+			inFile1 >> mClientName;
 			inFile1Written = false;
-	}
-	if((inFile2.eof()) && (inFile2Written == true))
-	{
-			inFile2 >> fClientNumber, fClientName;
-			inFile2Written = false;
-	}
-	if((inFile1.eof()) && (inFile2.eof()))
-	{
-			atLeastOneFileNotAtEnd = false;
-	}
-		
-		
 		}
+		if(!inFile2.eof() && inFile2Written == true)
+		{
+			inFile2 >> fClientNumber
+			inFile2 >> fClientName;
+			inFile2Written = false;
+		}
+		if(inFile1.eof() && (inFile2.eof())
+		{
+			atLeastOneFileNotAtEnd = false;
+		}				
+	}
 			
 	inFile1.close();
 	inFile2.close();
