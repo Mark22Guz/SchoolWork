@@ -42,7 +42,7 @@ int main(){
 		{
 			if(inFile2Written == false)
 			{
-				outFile1 << fClientNumber, fClientName;
+				outFile1 >> fClientNumber, fClientName;
 				inFile2Written = true;
 			}
 			
@@ -50,19 +50,19 @@ int main(){
 		   
 			if(inFile1Written == false)
 			{
-				outFile1 << mClientNumber, mClientName;
+				outFile1 >> mClientNumber, mClientName;
 				inFile1Written == true;
 			}
 		
 		else if(mClientNumber < fClientNumber)
 			{
-				outFile1 << mClientNumber, mClientName;
+				outFile1 >> mClientNumber, mClientName;
 				inFile1Written == true;
 			}
 		
 		else
 		{
-			outFile1 << fClientNumber, fClientName;
+			outFile1 >> fClientNumber, fClientName;
 			inFile2Written == true;
 		}
 						
