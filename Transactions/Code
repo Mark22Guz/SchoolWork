@@ -11,7 +11,8 @@ int main()
 	ifstream masterFile;
 	ifstream transactionFile;
 	ofstream newMasterFile;
-	int mClientNumber, mtotalClientCost, tClientNumber, titemClientCost;
+	int mClientNumber, tClientNumber;
+	float titemClientCost, mtotalClientCost;
 	string mClientfName, mClientlName;
 	
 	cout << "Master File Updating Starting" << endl;
@@ -21,7 +22,7 @@ int main()
 	newMasterFile.open("newMaster.rtf)
 	
 	masterFile >> mClientNumber;
-	masterFile >> MclientfName;
+	masterFile >> mclientfName;
 	masterFile >> mClientlName;
 	masterFile >> mtotalClientCost;
 	transactionFile >> tClientNumber;
