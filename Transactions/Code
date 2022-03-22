@@ -39,7 +39,7 @@ int main()
 			masterFile >> mtotalClientCost;			
 		}
 		
-		if(masterFile.eof)
+		if(masterFile.eof())
 		{
 			cout << "Error Client ID: " << tClientNumber << " not in MasterFile" << endl;
 		
@@ -59,12 +59,14 @@ int main()
 		else if(mClientNumber > tClientNumber)
 		{
 			cout << " Error Client ID: " << tClientNumber << " not in MasterFile << endl:
-		
+			
 		}
 	
+		transactionFile >> tClientNumber;
+		transactionFile >> titemClientCost;
 
-
-	}
+}
+	while(!masterFile.eof())
 
 	
 	
