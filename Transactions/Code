@@ -121,15 +121,18 @@ int main()
 
 }
 	while(!masterFile.eof())
-
+	{
+		newMasterFile << mClientNumber, mClientfName, mClientlName, mtotalClientCost;
+		masterFile >> mClientNumber;
+		masterFile >> mclientfName;
+		masterFile >> mClientlName;
+		masterFile >> mtotalClientCost;	
+	}
 	
+	cout << "Master File Updating Complete" << endl;
+	masterFile.close();
+	transactionFile.close();
+	newMasterFile.close();
 	
-
-
-
-	
-
-
-
-
+	return 0;	
 }
