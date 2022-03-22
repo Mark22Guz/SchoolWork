@@ -1,3 +1,57 @@
+// Pseudocode PLD Chapter 7 #6a pg. 301
+// Start
+//     Declarations
+//         InputFile masterFile;
+//         InputFile transactionFile;
+//         OutputFile newMasterFile;
+//         num mClientNumber, mtotalClientCost, tClientNumber, 
+// titemClientCost
+//         string mClientfName, mClientlName
+//     output "Master File Updating Starting"
+//     open masterFile "Master.rtf"
+//     open transactionFile "Transaction.rtf"
+//     open newMasterFile "newMaster.rtf"
+//     read mClientNumber, mClientfName, mClientlName, mtotalClientCost 
+// from masterFile
+//     read tClientNumber, titemClientCost from transactionFile
+//     while ( transactionFile not EOF )
+//         while (( masterFile not EOF) and (mClientNumber < 
+// tClientNumber))
+//             output mClientNumber, mClientfName, mClientlName, 
+// mtotalClientCost to newMasterFile
+//             read mClientNumber, mClientfName, mClientlName, 
+// mtotalClientCost from masterFile
+//         endwhile
+//         if (masterFile is EOF)
+//             output "Error Client ID: ", tClientNumber, " not in Master 
+// File."
+//         else if (mClientNumber == tClientNumber) then
+//             mtotalClientCost = mtotalClientCost + titemClientCost
+//             output mClientNumber, mClientfName, mClientlName, 
+// mtotalClientCost to newMasterFile
+//             read mClientNumber, mClientfName, mClientlName, 
+// mtotalClientCost from masterFile
+//         else if (mClientNumber > tClientNumber) then
+//             output "Error Client ID: ", tClientNumber, " not in Master 
+// File."
+//         endif
+//         read tClientNumber, titemClientCost from transactionFile
+//     endwhile
+//     while (masterFile not EOF)
+//         output mClientNumber, mClientfName, mClientlName, 
+// mtotalClientCost to newMasterFile
+//         read mClientNumber, mClientfName, mClientlName, 
+// mtotalClientCost from masterFile
+//     endwhile
+//     output "Master File Updating Complete"
+//     close masterFile
+//     close transactionFile
+//     close newMasterFile
+// Stop
+
+
+
+
 #include <iostream>
 #include <fstream>
 #include <string>
