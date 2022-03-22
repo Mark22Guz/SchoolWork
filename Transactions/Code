@@ -33,9 +33,16 @@ int main()
 		while((!masterFile.eof()) && (mClientNumber < tClientNumber)
 		{
 			newMasterFile << mClientNumber, mClientfName, mClientlName, mtotalClientCost;
-			
+			masterFile >> mClientNumber;
+			masterFile >> mclientfName;
+			masterFile >> mClientlName;
+			masterFile >> mtotalClientCost;			
+		}
 		
-	
+		if(masterFile.eof)
+		{
+			cout << "Error Client ID: " << tClientNumber << " not in MasterFile"
+		
 		}
 	
 
