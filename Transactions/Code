@@ -71,24 +71,24 @@ int main()
 	
 	cout << "Master File Updating Starting" << endl;
 	
-	masterFile.open("Master.rtf")
-	transactionFile.open("Transaction.rtf")
-	newMasterFile.open("newMaster.rtf)
+	masterFile.open("Master.rtf");
+	transactionFile.open("Transaction.rtf");
+	newMasterFile.open("newMaster.rtf");
 	
 	masterFile >> mClientNumber;
-	masterFile >> mclientfName;
+	masterFile >> mClientfName;
 	masterFile >> mClientlName;
 	masterFile >> mtotalClientCost;
 	transactionFile >> tClientNumber;
 	transactionFile >> titemClientCost;
 
-	while(!trancatiofile.eof())
+	while(!transactionFile.eof())
 	{
-		while((!masterFile.eof()) && (mClientNumber < tClientNumber)
+		while((!masterFile.eof()) && (mClientNumber < tClientNumber))
 		{
 			newMasterFile << mClientNumber, mClientfName, mClientlName, mtotalClientCost;
 			masterFile >> mClientNumber;
-			masterFile >> mclientfName;
+			masterFile >> mClientfName;
 			masterFile >> mClientlName;
 			masterFile >> mtotalClientCost;			
 		}
@@ -101,10 +101,10 @@ int main()
 		
 		else if(mClientNumber == tClientNumber)
 		{
-			mtotalClientCost = tClientCost + titemClientCost;
+			mtotalClientCost = mtotalClientCost + titemClientCost;
 			newMasterFile << mClientNumber, mClientfName, mClientlName, mtotalClientCost;
 			masterFile >> mClientNumber;
-			masterFile >> mclientfName;
+			masterFile >> mClientfName;
 			masterFile >> mClientlName;
 			masterFile >> mtotalClientCost;	
 	
@@ -112,7 +112,7 @@ int main()
 		
 		else if(mClientNumber > tClientNumber)
 		{
-			cout << " Error Client ID: " << tClientNumber << " not in MasterFile << endl:
+			cout << " Error Client ID: " << tClientNumber << " not in MasterFile" << endl;
 			
 		}
 	
@@ -124,7 +124,7 @@ int main()
 	{
 		newMasterFile << mClientNumber, mClientfName, mClientlName, mtotalClientCost;
 		masterFile >> mClientNumber;
-		masterFile >> mclientfName;
+		masterFile >> mClientfName;
 		masterFile >> mClientlName;
 		masterFile >> mtotalClientCost;	
 	}
