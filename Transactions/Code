@@ -66,7 +66,7 @@ int main()
 	ifstream transactionFile;
 	ofstream newMasterFile;
 	int mClientNumber, tClientNumber;
-	float titemClientCost, mtotalClientCost;
+	double titemClientCost, mtotalClientCost;
 	string mClientfName, mClientlName;
 	
 	cout << "Master File Updating Starting" << endl;
