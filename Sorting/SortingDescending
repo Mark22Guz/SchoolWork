@@ -1,0 +1,72 @@
+// Name: Mark Guzman
+// Email: guzman.mark@titans.easternflorida.edu
+// Pseudocode PLD Chapter 8 #1 pg. 361
+// Start
+//     Declarations
+//         num SIZE = 10
+//         num NUMBERS[SIZE]
+//         num i
+//         num j
+//         num temp
+//     for i = 0 to SIZE - 1
+//         output "Please enter a number: "
+//         input NUMBERS[i]
+//     endfor
+//     for i = 0 to SIZE - 2
+//         for j = 0 to SIZE - 2
+//             if (NUMBERS[j] < NUMBERS[j+1])
+//               temp = NUMBERS[j]
+//               NUMBERS[j] = NUMBERS[j+1]
+//               NUMBERS[j+1] = temp
+//             endif
+//         endfor
+//     endfor
+//     output "Sorted List"
+//     output "==========="
+//     for i = 0 to SIZE - 1
+//         output "Number ", i + 1, ": ", NUMBERS[i]
+//     endfor
+// Stop
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	int SIZE = 10;
+	int NUMBERS[SIZE];
+	int i, j, temp;
+	for (i = 0; i < SIZE - 1; i++)
+	{
+		cout << "Please enter a number: " << endl;
+		cin >> NUMBERS[i];	
+	}
+	for (i = 0; i < SIZE - 2; i++)
+	{
+		for(j = 0; j < SIZE - 2; j++ ) 
+		{
+			if( NUMBERS[j] < NUMBERS[j+1])
+			{
+				temp = NUMBERS[j];
+				NUMBERS[j] = NUMBERS[j+1];
+				NUMBERS[j+1] = temp;
+			}
+		} 
+		
+	}
+	
+	cout << "Sorted List" << endl;
+	cout << "===========" << endl;
+	for(i = 0; i < SIZE - 1; i++)
+	{
+		cout << "Number " << i + 1 << ": " << NUMBERS[i] << endl;
+	}
+	
+
+
+   
+
+	return 0;
+}
