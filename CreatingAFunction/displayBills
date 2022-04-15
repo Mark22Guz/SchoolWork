@@ -41,24 +41,3 @@ int main()
 	return 0;
 }
 	
-	void displayBills(int dollars)
-	{
-		int ones;
-		int fives;
-		int tens;
-		int twenties;
-		int temp;
-		
-		twenties = dollars / 20;
-		temp = dollars % 20;
-		tens = temp / 10;
-		temp = temp % 10;
-		fives = temp / 5;
-		ones = temp % 5;
-		
-		cout << "The dollar amount of " << dollars << " can be represented by the following monetary denominations" << endl;
-		cout << "     Twenties: " << twenties << endl;
-		cout << "     Tens: " << tens << endl;
-		cout << "     Fives: " << fives << endl;
-		cout << "     Ones: " << ones << endl;
-	}
