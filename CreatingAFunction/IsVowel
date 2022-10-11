@@ -1,0 +1,54 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+  bool isVowel (char x)
+  {
+
+    if (x == 65 or x == 97)
+    {
+      cout << x << " is a vowel: " << true;
+      return true;
+    }
+
+    if (x == 69 or x == 101)
+    {
+      cout << x << " is a vowel: " << true;
+      return true;
+    }
+     
+     if (x == 73 or x == 105)
+    {
+      cout << x << " is a vowel: " << true;
+      return true;
+    }
+     
+     if (x == 79 or x == 111)
+    {
+      cout << x << " is a vowel: " << true;
+      return true;
+    }
+     if (x == 85 or x == 117)
+    {
+      cout << x << " is a vowel: " << true;
+      return true;
+    }
+    
+    else
+    {
+      cout << x << " is a vowel: " << false;
+      return false;
+    }
+  }
+
+int main() {
+  
+    char letter;
+    cin >> letter;
+    isVowel(letter);
+  
+
+
+    return 0;
+}
