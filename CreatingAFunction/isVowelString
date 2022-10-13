@@ -1,0 +1,70 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+  bool isVowel (char x)
+  {
+    
+     if (x == 65 or x == 97)
+        {
+           
+           return true;
+        }
+
+      if (x == 69 or x == 101)
+        {
+           
+            return true;
+        }
+     
+    
+      if (x == 73 or x == 105)
+        {
+           
+            return true;
+        }
+     
+     
+      if (x == 79 or x == 111)
+        {
+          
+            return true;
+        }
+     
+      if (x == 85 or x == 117)
+       {
+         
+            return true;
+       }
+    
+      else
+       {
+        return false;
+       }
+    
+  }
+
+ bool isVowel();
+
+int main() 
+{
+    string words;
+    int vowels = 0;
+    int wordlength;
+    cout << "Input a sequence of characters: " << endl;
+    getline(cin,words);
+    wordlength = words.length();
+
+    for ( int i = 0; i <= wordlength; i ++)
+      { 
+        if (isVowel(words[i]) == true)
+          {
+              vowels ++;
+          } 
+      }
+
+    cout << "There are " << vowels << " vowels in this sentence." << endl;
+
+  return 0;
+}
