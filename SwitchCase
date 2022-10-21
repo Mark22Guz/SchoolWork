@@ -1,0 +1,19 @@
+enum Choice {EASY = 1, MEDIUM = 2, HARD = 3};
+int i = -1; // This holds the place of an invalid value to the switch
+cin >> i; // Ask the user to pick 1, 2, 3 the ENUM holds what 1 2 3 would equal out to
+// Basically an if statement
+switch(i)
+{
+  case EASY: // if (i == 1)
+    cout << "Easy\n"; // do this
+    break;
+  case MEDIUM:
+    cout << "Medium\n";
+    break;
+  case HARD:
+    cout << "Hard\n";
+    break;
+  default: // if i == anything other than 1 2 3
+    cout << "Invalid Selection\n";
+    break;
+}
