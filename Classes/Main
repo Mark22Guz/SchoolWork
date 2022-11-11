@@ -1,0 +1,30 @@
+#include <iostream>
+#include "clockType.h"
+
+using namespace std;
+
+int main() {
+    int hours;
+    int minutes;
+    int seconds;
+
+    clockType clock1;
+    clock1.setTime(10,20,30);
+    clock1.getTime(hours,minutes,seconds);
+    cout << hours << minutes << seconds << endl;
+    clock1.setMinutes(25);
+    clock1.getTime(hours,minutes,seconds);
+    cout << minutes;
+
+    
+    
+   
+    
+    
+   
+    
+    
+
+
+    return 0;
+}
